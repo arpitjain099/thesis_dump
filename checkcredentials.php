@@ -36,6 +36,7 @@ if($result->num_rows>0){
 
 */
 // ^^ old php code
+header('Access-Control-Allow-Origin: *');
  $m = new MongoClient();
    //echo "Connection to database successfully";
    //echo "<br>";
@@ -44,7 +45,7 @@ if($result->num_rows>0){
    //echo "Database thesisdb selected";
    $collection = $db->users;
    //echo "Collection selected succsessfully";
-   $joe = $collection->findOne(array("username" => $_GET['username'],"password"=> $_GET['password']));
+   $joe = $collection->findOne(array("username" => $_POST['username'],"password"=> $_POST['password']));
    if(!$joe)echo "wrong credentials";
    //
    else echo "user found";

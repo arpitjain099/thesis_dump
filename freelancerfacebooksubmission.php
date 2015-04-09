@@ -1,7 +1,6 @@
 <?php
 header('Access-Control-Allow-Origin: *');
-$name== $_POST['name'];
-$collegename = $_POST['collegename'];
+
 
 //echo $passworda;
 //$device = $_GET['device'];
@@ -15,7 +14,7 @@ $m = new MongoClient();
    $joe = $collection->findOne(array("username" => $_POST['username']));
    if($joe)echo "user exists";
    else{
-   $collection->insert(array("username" => $_POST['username'],"password"=> $_POST['password'], "email"=>$_POST['email'],"name"=> $_POST['name'],"collegename" => $_POST['collegename'], "wallet"=>0,"level"=>0, "photo"=>"http://img2.wikia.nocookie.net/__cb20090709062312/starwars/images/d/d6/Human_NEGAS.jpg"));	
+   $collection->insert(array("username" => "","password"=> "", "email"=>$_POST['email'],"name"=> $_POST['name'],"collegename" => "", "wallet"=>0,"level"=>0,"photo"=>$_POST['photo']));	
    //create new directory for recruiter
    mkdir((string)$_POST['username'],0777);
 	echo "user inserted";
