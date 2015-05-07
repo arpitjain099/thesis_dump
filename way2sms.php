@@ -1,8 +1,8 @@
 <?php
 
 	function send_sms($recerverNO) {
-		$userID="8960482697";
-		$userPWD="16232325";
+		$userID="phonenumber";
+		$userPWD="password";
 		$message="Registered on mCrowd!";
 		if (!function_exists('curl_init')) {
 			//echo "Error : Curl library not installed";
