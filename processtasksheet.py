@@ -2,6 +2,7 @@ import csv
 from pymongo import MongoClient
 client = MongoClient()
 db=client.thesisdb
+import time
 from time import gmtime, strftime
 collection=db.tasks
 #print db
@@ -27,7 +28,7 @@ with open('tasksheet.csv', 'rb') as csvfile:
 				question=defaultquestions[0]
 				if row[2]!="":
 					question=row[2]
-				post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":row[1],"textcontent":"","mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":1,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
+				post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":row[1],"textcontent":"","mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":1,"dateofadding":str(int(time.time()))}
 				#print "fa"
 				collection.insert(post)
 				#collection.find_one()
@@ -35,7 +36,7 @@ with open('tasksheet.csv', 'rb') as csvfile:
 				question=defaultquestions[1]
 				if row[2]!="":
 					question=row[2]
-				post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":"","textcontent":row[1],"mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":2,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
+				post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":"","textcontent":row[1],"mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":2,"dateofadding":str(int(time.time()))}
 				#print "fa"
 				collection.insert(post)
 				#collection.find_one()
@@ -43,28 +44,28 @@ with open('tasksheet.csv', 'rb') as csvfile:
 				question=defaultquestions[2]
 				if row[2]!="":
 					question=row[2]
-				post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":row[1],"textcontent":"","mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":3,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
+				post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":row[1],"textcontent":"","mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":3,"dateofadding":str(int(time.time()))}
 				#print "fa"
 				collection.insert(post)
 			elif row[0]=='4':
 				question=defaultquestions[3]
 				if row[3]!="":
 					question=row[3]
-				post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":"","textcontent":"","mp3url":"","img1":"","img2":"","heading":row[1],"summary":row[2],"tasksymbol":4,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
+				post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":"","textcontent":"","mp3url":"","img1":"","img2":"","heading":row[1],"summary":row[2],"tasksymbol":4,"dateofadding":str(int(time.time()))}
 				#print "fa"
 				collection.insert(post)
 			elif row[0]=='5':
 				question=defaultquestions[3]
 				if row[3]!="":
 					question=row[3]
-				post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":"","textcontent":"","mp3url":"","img1":"","img2":"","heading":row[1],"summary":row[2],"tasksymbol":5,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
+				post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":"","textcontent":"","mp3url":"","img1":"","img2":"","heading":row[1],"summary":row[2],"tasksymbol":5,"dateofadding":str(int(time.time()))}
 				#print "fa"
 				collection.insert(post)
 			elif row[0]=='6':
 				question=defaultquestions[5]
 				if row[2]!="":
 					question=row[2]
-				post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":row[1],"textcontent":"","mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":6,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
+				post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":row[1],"textcontent":"","mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":6,"dateofadding":str(int(time.time()))}
 				#print "fa"
 				collection.insert(post)
 
@@ -72,35 +73,35 @@ with open('tasksheet.csv', 'rb') as csvfile:
 				question=defaultquestions[6]
 				if row[3]!="":
 					question=row[3]
-				post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":"","textcontent":"","mp3url":"","img1":row[1],"img2":row[2],"heading":"","summary":"","tasksymbol":7,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
+				post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":"","textcontent":"","mp3url":"","img1":row[1],"img2":row[2],"heading":"","summary":"","tasksymbol":7,"dateofadding":str(int(time.time()))}
 				#print "fa"
 				collection.insert(post)
 			elif row[0]=='8':
 				question=defaultquestions[7]
 				if row[3]!="":
 					question=row[3]
-				post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":"","textcontent":"","mp3url":"","img1":row[2],"img2":row[3],"heading":"","summary":"","tasksymbol":8,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
+				post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":"","textcontent":"","mp3url":"","img1":row[2],"img2":row[3],"heading":"","summary":"","tasksymbol":8,"dateofadding":str(int(time.time()))}
 				#print "fa"
 				collection.insert(post)
 			elif row[0]=='9':
 				question=defaultquestions[8]
 				if row[2]!="":
 					question=row[2]
-				post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":row[1],"textcontent":"","mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":9,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
+				post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":row[1],"textcontent":"","mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":9,"dateofadding":str(int(time.time()))}
 				#print "fa"
 				collection.insert(post)
 			elif row[0]=='10':
 				question=defaultquestions[9]
 				if row[2]!="":
 					question=row[2]
-				post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":"","textcontent":row[1],"mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":10,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
+				post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":"","textcontent":row[1],"mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":10,"dateofadding":str(int(time.time()))}
 				#print "fa"
 				collection.insert(post)
 			elif row[0]=='11':
 				question=defaultquestions[10]
 				if row[2]!="":
 					question=row[2]
-				post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":"","textcontent":row[1],"mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":11,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
+				post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":"","textcontent":row[1],"mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":11,"dateofadding":str(int(time.time()))}
 				#print "fa"
 				collection.insert(post)
 
@@ -108,28 +109,28 @@ with open('tasksheet.csv', 'rb') as csvfile:
 				question=defaultquestions[11]
 				if row[2]!="":
 					question=row[2]
-				post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":"","textcontent":row[1],"mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":12,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
+				post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":"","textcontent":row[1],"mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":12,"dateofadding":str(int(time.time()))}
 				#print "fa"
 				collection.insert(post)
 			elif row[0]=='13':
 				question=defaultquestions[12]
 				if row[3]!="":
 					question=row[3]
-				post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":"","textcontent":"","mp3url":"","img1":row[2],"img2":row[3],"heading":"","summary":"","tasksymbol":13,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
+				post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":"","textcontent":"","mp3url":"","img1":row[2],"img2":row[3],"heading":"","summary":"","tasksymbol":13,"dateofadding":str(int(time.time()))}
 				#print "fa"
 				collection.insert(post)
 			elif row[0]=='14':
 				question=defaultquestions[13]
 				if row[3]!="":
 					question=row[3]
-				post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":"","textcontent":"","mp3url":"","img1":row[2],"img2":row[3],"heading":"","summary":"","tasksymbol":14,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
+				post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":"","textcontent":"","mp3url":"","img1":row[2],"img2":row[3],"heading":"","summary":"","tasksymbol":14,"dateofadding":str(int(time.time()))}
 				#print "fa"
 				collection.insert(post)
 			elif row[0]=='15':
 				question=defaultquestions[14]
 				if row[2]!="":
 					question=row[2]
-				post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":"","textcontent":"","mp3url":row[1],"img1":"","":"","heading":"","summary":"","tasksymbol":15,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
+				post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":"","textcontent":"","mp3url":row[1],"img1":"","":"","heading":"","summary":"","tasksymbol":15,"dateofadding":str(int(time.time()))}
 				#print "fa"
 				collection.insert(post)
 			post = collection_rec.find_one({"username":username})

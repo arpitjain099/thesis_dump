@@ -1,0 +1,427 @@
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+ 
+ 
+    var i = $('input').size() + 1;
+     
+    $('#add').click(function() {
+    	if($('#combo').val()=='1')
+    		{   	
+
+    			//post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":row[1],"textcontent":"","mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":3,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
+    	$('</br><div><textarea rows="4" cols="40" type="text" class="question" name="dynamic[]" placeholder="Question" /></div>').fadeIn('slow').appendTo('.inputs');
+    	
+    	$('<div><textarea rows="1" cols="40" type="text" class="imgurl" name="dynamic[]" placeholder="img url" /></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="1" cols="40" type="text" class="textcontent" name="dynamic[]" placeholder="textcontent" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="1" cols="40" type="text" class="mp3url" name="dynamic[]" placeholder="mp3 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        
+         $('<div><textarea rows="1" cols="40" type="text" class="img1url" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="img2url" name="dynamic[]" placeholder="img2 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="heading" name="dynamic[]" placeholder="heading" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="summary" name="dynamic[]" placeholder="summary" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><input type="text"  rows="1" cols="40" type="text" class="tasksymbol" name="dynamic[]" placeholder="img1 url" style="display:none;" value="1"/></div>').fadeIn('slow').appendTo('.inputs');
+
+        
+        }
+
+        else if($('#combo').val()=='2')
+    		{   	
+
+    			//post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":row[1],"textcontent":"","mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":3,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
+    	$('</br><div><textarea rows="4" cols="40" type="text" class="question" name="dynamic[]" placeholder="Question" /></div>').fadeIn('slow').appendTo('.inputs');
+    	
+    	$('<div><textarea rows="1" cols="40" type="text" class="imgurl" name="dynamic[]" placeholder="img url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="1" cols="40" type="text" class="textcontent" name="dynamic[]" placeholder="textcontent" /></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="1" cols="40" type="text" class="mp3url" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        
+         $('<div><textarea rows="1" cols="40" type="text" class="img1url" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="img2url" name="dynamic[]" placeholder="img2 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="heading" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="summary" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+       $('<div><input type="text"  rows="1" cols="40" type="text" class="tasksymbol" name="dynamic[]" placeholder="img1 url" style="display:none;" value="2"/></div>').fadeIn('slow').appendTo('.inputs');
+
+        }
+
+        else if($('#combo').val()=='3')
+    		{   	
+
+    			//post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":row[1],"textcontent":"","mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":3,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
+    	$('</br><div><textarea rows="4" cols="40" type="text" class="question" name="dynamic[]" placeholder="Question" /></div>').fadeIn('slow').appendTo('.inputs');
+    	
+    	$('<div><textarea rows="1" cols="40" type="text" class="imgurl" name="dynamic[]" placeholder="img url" /></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="1" cols="40" type="text" class="textcontent" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="1" cols="40" type="text" class="mp3url" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        
+         $('<div><textarea rows="1" cols="40" type="text" class="img1url" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="img2url" name="dynamic[]" placeholder="img2 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="heading" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="summary" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><input type="text"  rows="1" cols="40" type="text" class="tasksymbol" name="dynamic[]" placeholder="img1 url" style="display:none;" value="3"/></div>').fadeIn('slow').appendTo('.inputs');
+
+        
+        }
+
+
+        else if($('#combo').val()=='6')
+    		{   	
+
+    			//post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":row[1],"textcontent":"","mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":3,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
+    	$('</br><div><textarea rows="4" cols="40" type="text" class="question" name="dynamic[]" placeholder="Question" /></div>').fadeIn('slow').appendTo('.inputs');
+    	
+    	$('<div><textarea rows="1" cols="40" type="text" class="imgurl" name="dynamic[]" placeholder="img url" /></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="1" cols="40" type="text" class="textcontent" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="1" cols="40" type="text" class="mp3url" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        
+         $('<div><textarea rows="1" cols="40" type="text" class="img1url" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="img2url" name="dynamic[]" placeholder="img2 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="heading" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="summary" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><input type="text"  rows="1" cols="40" type="text" class="tasksymbol" name="dynamic[]" placeholder="img1 url" style="display:none;" value="6"/></div>').fadeIn('slow').appendTo('.inputs');
+
+        
+        }
+
+        else  if($('#combo').val()=='9')
+    		{   	
+
+    			//post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":row[1],"textcontent":"","mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":3,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
+    	$('</br><div><textarea rows="4" cols="40" type="text" class="question" name="dynamic[]" placeholder="Question" /></div>').fadeIn('slow').appendTo('.inputs');
+    	
+    	$('<div><textarea rows="1" cols="40" type="text" class="imgurl" name="dynamic[]" placeholder="img url" /></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="1" cols="40" type="text" class="textcontent" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="1" cols="40" type="text" class="mp3url" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        
+         $('<div><textarea rows="1" cols="40" type="text" class="img1url" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="img2url" name="dynamic[]" placeholder="img2 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="heading" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="summary" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><input type="text"  rows="1" cols="40" type="text" class="tasksymbol" name="dynamic[]" placeholder="img1 url" style="display:none;" value="9"/></div>').fadeIn('slow').appendTo('.inputs');
+
+        
+        }
+
+        else if($('#combo').val()=='10')
+    		{   	
+
+    			//post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":row[1],"textcontent":"","mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":3,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
+    	$('</br><div><textarea rows="4" cols="40" type="text" class="question" name="dynamic[]" placeholder="Question" /></div>').fadeIn('slow').appendTo('.inputs');
+    	
+    	$('<div><textarea rows="1" cols="40" type="text" class="imgurl" name="dynamic[]" placeholder="img url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="1" cols="40" type="text" class="textcontent" name="dynamic[]" placeholder="img1 url" /></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="1" cols="40" type="text" class="mp3url" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        
+         $('<div><textarea rows="1" cols="40" type="text" class="img1url" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="img2url" name="dynamic[]" placeholder="img2 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="heading" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="summary" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+       $('<div><input type="text"  rows="1" cols="40" type="text" class="tasksymbol" name="dynamic[]" placeholder="img1 url" style="display:none;" value="10"/></div>').fadeIn('slow').appendTo('.inputs');
+
+        }
+        else if($('#combo').val()=='11')
+    		{   	
+
+    			//post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":row[1],"textcontent":"","mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":3,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
+    	$('</br><div><textarea rows="4" cols="40" type="text" class="question" name="dynamic[]" placeholder="Question" /></div>').fadeIn('slow').appendTo('.inputs');
+    	
+    	$('<div><textarea rows="1" cols="40" type="text" class="imgurl" name="dynamic[]" placeholder="img url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="1" cols="40" type="text" class="textcontent" name="dynamic[]" placeholder="img1 url" /></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="1" cols="40" type="text" class="mp3url" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        
+         $('<div><textarea rows="1" cols="40" type="text" class="img1url" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="img2url" name="dynamic[]" placeholder="img2 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="heading" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="summary" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+       $('<div><input type="text"  rows="1" cols="40" type="text" class="tasksymbol" name="dynamic[]" placeholder="img1 url" style="display:none;" value="11"/></div>').fadeIn('slow').appendTo('.inputs');
+
+        }
+
+        else if($('#combo').val()=='12')
+    		{   	
+
+    			//post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":row[1],"textcontent":"","mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":3,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
+    	$('</br><div><textarea rows="4" cols="40" type="text" class="question" name="dynamic[]" placeholder="Question" /></div>').fadeIn('slow').appendTo('.inputs');
+    	
+    	$('<div><textarea rows="1" cols="40" type="text" class="imgurl" name="dynamic[]" placeholder="img url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="1" cols="40" type="text" class="textcontent" name="dynamic[]" placeholder="img1 url" /></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="1" cols="40" type="text" class="mp3url" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        
+         $('<div><textarea rows="1" cols="40" type="text" class="img1url" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="img2url" name="dynamic[]" placeholder="img2 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="heading" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="summary" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+       $('<div><input type="text"  rows="1" cols="40" type="text" class="tasksymbol" name="dynamic[]" placeholder="img1 url" style="display:none;" value="12"/></div>').fadeIn('slow').appendTo('.inputs');
+
+        }
+
+        else if($('#combo').val()=='4')
+    		{   	
+
+    			//post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":row[1],"textcontent":"","mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":3,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
+    	$('</br><div><textarea rows="4" cols="40" type="text" class="question" name="dynamic[]" placeholder="Question" /></div>').fadeIn('slow').appendTo('.inputs');
+    	
+    	$('<div><textarea rows="1" cols="40" type="text" class="imgurl" name="dynamic[]" placeholder="img url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="1" cols="40" type="text" class="textcontent" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="1" cols="40" type="text" class="mp3url" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        
+         $('<div><textarea rows="1" cols="40" type="text" class="img1url" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="img2url" name="dynamic[]" placeholder="img2 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="heading" name="dynamic[]" placeholder="img1 url" /></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="summary" name="dynamic[]" placeholder="img1 url" /></div>').fadeIn('slow').appendTo('.inputs');
+       $('<div><input type="text"  rows="1" cols="40" type="text" class="tasksymbol" name="dynamic[]" placeholder="img1 url" style="display:none;" value="4"/></div>').fadeIn('slow').appendTo('.inputs');
+
+        }
+
+        else if($('#combo').val()=='5')
+    		{   	
+
+    			//post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":row[1],"textcontent":"","mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":3,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
+    	$('</br><div><textarea rows="4" cols="40" type="text" class="question" name="dynamic[]" placeholder="Question" /></div>').fadeIn('slow').appendTo('.inputs');
+    	
+    	$('<div><textarea rows="1" cols="40" type="text" class="imgurl" name="dynamic[]" placeholder="img url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="1" cols="40" type="text" class="textcontent" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="1" cols="40" type="text" class="mp3url" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        
+         $('<div><textarea rows="1" cols="40" type="text" class="img1url" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="img2url" name="dynamic[]" placeholder="img2 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="heading" name="dynamic[]" placeholder="img1 url" /></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="summary" name="dynamic[]" placeholder="img1 url" /></div>').fadeIn('slow').appendTo('.inputs');
+       $('<div><input type="text"  rows="1" cols="40" type="text" class="tasksymbol" name="dynamic[]" placeholder="img1 url" style="display:none;" value="5"/></div>').fadeIn('slow').appendTo('.inputs');
+
+        }
+
+
+        else if($('#combo').val()=='7')
+    		{   	
+
+    			//post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":row[1],"textcontent":"","mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":3,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
+    	$('</br><div><textarea rows="4" cols="40" type="text" class="question" name="dynamic[]" placeholder="Question" /></div>').fadeIn('slow').appendTo('.inputs');
+    	
+    	$('<div><textarea rows="1" cols="40" type="text" class="imgurl" name="dynamic[]" placeholder="img url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="1" cols="40" type="text" class="textcontent" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="1" cols="40" type="text" class="mp3url" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        
+         $('<div><textarea rows="1" cols="40" type="text" class="img1url" name="dynamic[]" placeholder="img1 url" /></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="img2url" name="dynamic[]" placeholder="img2 url" /></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="heading" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="summary" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+       $('<div><input type="text"  rows="1" cols="40" type="text" class="tasksymbol" name="dynamic[]" placeholder="img1 url" style="display:none;" value="7"/></div>').fadeIn('slow').appendTo('.inputs');
+
+        }
+
+        else if($('#combo').val()=='8')
+    		{   	
+
+    			//post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":row[1],"textcontent":"","mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":3,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
+    	$('</br><div><textarea rows="4" cols="40" type="text" class="question" name="dynamic[]" placeholder="Question" /></div>').fadeIn('slow').appendTo('.inputs');
+    	
+    	$('<div><textarea rows="1" cols="40" type="text" class="imgurl" name="dynamic[]" placeholder="img url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="1" cols="40" type="text" class="textcontent" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="1" cols="40" type="text" class="mp3url" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        
+         $('<div><textarea rows="1" cols="40" type="text" class="img1url" name="dynamic[]" placeholder="img1 url" /></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="img2url" name="dynamic[]" placeholder="img2 url" /></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="heading" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="summary" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+       $('<div><input type="text"  rows="1" cols="40" type="text" class="tasksymbol" name="dynamic[]" placeholder="img1 url" style="display:none;" value="8"/></div>').fadeIn('slow').appendTo('.inputs');
+
+        }
+
+        else if($('#combo').val()=='13')
+    		{   	
+
+    			//post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":row[1],"textcontent":"","mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":3,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
+    	$('</br><div><textarea rows="4" cols="40" type="text" class="question" name="dynamic[]" placeholder="Question" /></div>').fadeIn('slow').appendTo('.inputs');
+    	
+    	$('<div><textarea rows="1" cols="40" type="text" class="imgurl" name="dynamic[]" placeholder="img url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="1" cols="40" type="text" class="textcontent" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="1" cols="40" type="text" class="mp3url" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        
+         $('<div><textarea rows="1" cols="40" type="text" class="img1url" name="dynamic[]" placeholder="img1 url" /></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="img2url" name="dynamic[]" placeholder="img2 url" /></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="heading" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="summary" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+       $('<div><input type="text"  rows="1" cols="40" type="text" class="tasksymbol" name="dynamic[]" placeholder="img1 url" style="display:none;" value="13"/></div>').fadeIn('slow').appendTo('.inputs');
+
+        }
+
+        else if($('#combo').val()=='14')
+    		{   	
+
+    			//post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":row[1],"textcontent":"","mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":3,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
+    	$('</br><div><textarea rows="4" cols="40" type="text" class="question" name="dynamic[]" placeholder="Question" /></div>').fadeIn('slow').appendTo('.inputs');
+    	
+    	$('<div><textarea rows="1" cols="40" type="text" class="imgurl" name="dynamic[]" placeholder="img url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="1" cols="40" type="text" class="textcontent" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="1" cols="40" type="text" class="mp3url" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        
+         $('<div><textarea rows="1" cols="40" type="text" class="img1url" name="dynamic[]" placeholder="img1 url" /></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="img2url" name="dynamic[]" placeholder="img2 url" /></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="heading" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="summary" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+       $('<div><input type="text"  rows="1" cols="40" type="text" class="tasksymbol" name="dynamic[]" placeholder="img1 url" style="display:none;" value="14"/></div>').fadeIn('slow').appendTo('.inputs');
+
+        }
+
+
+        else if($('#combo').val()=='15')
+    		{   	
+
+    			//post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":row[1],"textcontent":"","mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":3,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
+    	$('</br><div><textarea rows="4" cols="40" type="text" class="question" name="dynamic[]" placeholder="Question" /></div>').fadeIn('slow').appendTo('.inputs');
+    	
+    	$('<div><textarea rows="1" cols="40" type="text" class="imgurl" name="dynamic[]" placeholder="img url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="1" cols="40" type="text" class="textcontent" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="1" cols="40" type="text" class="mp3url" name="dynamic[]" placeholder="img1 url" /></div>').fadeIn('slow').appendTo('.inputs');
+        
+         $('<div><textarea rows="1" cols="40" type="text" class="img1url" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="img2url" name="dynamic[]" placeholder="img2 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="heading" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="summary" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
+       $('<div><input type="text"  rows="1" cols="40" type="text" class="tasksymbol" name="dynamic[]" placeholder="img1 url" style="display:none;" value="15"/></div>').fadeIn('slow').appendTo('.inputs');
+
+        }
+
+        i++;
+    });
+     
+    $('#remove').click(function() {
+    if(i > 1) {
+        $('.question:last').remove();
+        $('.imgurl:last').remove();
+        $('.img1url:last').remove();
+        $('.img2url:last').remove();
+        $('.textcontent:last').remove();
+        $('.heading:last').remove();
+        $('.summary:last').remove();
+        $('.mp3url:last').remove();
+        $('.tasksymbol:last').remove();
+        i--;
+    }
+    });
+     
+    $('#reset').click(function() {
+    while(i > 2) {
+        $('.question:last').remove();
+        $('.imgurl:last').remove();
+        $('.img1url:last').remove();
+        $('.img2url:last').remove();
+        $('.textcontent:last').remove();
+        $('.heading:last').remove();
+        $('.summary:last').remove();
+        $('.mp3url:last').remove();
+        $('.tasksymbol:last').remove();
+        i--;
+    }
+    });
+     
+    // here's our click function for when the forms submitted
+ 
+    $('.submit').click(function(){
+    var questions = [];                  
+    var username = [];
+    var imgurl = [];
+    var img1url = [];
+    var img2url = [];
+    var summary = [];
+    var heading = [];
+    var mp3url = [];
+    var textcontent = []; 
+    var tasksymbol = [];
+    $.each($('.question'), function() {
+        questions.push($(this).val());
+    });
+    $.each($('.question'), function() {
+        username.push("sample username");
+    });
+
+    $.each($('.imgurl'), function() {
+        imgurl.push($(this).val());
+    });
+
+    $.each($('.img1url'), function() {
+        img1url.push($(this).val());
+    });
+    $.each($('.img2url'), function() {
+        img2url.push($(this).val());
+    });
+
+    $.each($('.heading'), function() {
+        heading.push($(this).val());
+    });
+     $.each($('.mp3url'), function() {
+        mp3url.push($(this).val());
+    });
+     $.each($('.textcontent'), function() {
+        textcontent.push($(this).val());
+    });
+
+    $.each($('.summary'), function() {
+        summary.push($(this).val());
+    });
+    $.each($('.tasksymbol'), function() {
+        tasksymbol.push($(this).val());
+    });
+     
+     
+    //$.post( "http://localhost/jquery-quiz-server-side/response.php", { questions: questions, options: options } );
+    $.post( "http://localhost/jquery-quiz-server-side/response.php", { questions: questions, username: username,imgurl:imgurl,img1url:img1url,img2url:img2url,heading:heading,mp3url:mp3url,textcontent:textcontent,summary:summary,tasksymbol:tasksymbol,})
+  .done(function( data ) {
+  	console.log(questions);console.log(username);console.log(tasksymbol);
+    document.getElementById("output").innerHTML=data;
+  });
+    //alert(options);
+     
+    return false;
+                                 
+    });
+     
+ 
+});
+</script>
+<center><br><br>
+<div id="container">
+
+<div class="sky_ad" align="right">
+
+</div>
+<div id="inner_wrap">
+
+<div class="dynamic-form">
+
+
+<a href="#" id="add">Add</a> | <a href="#" id="remove">Remove</a>  | <a href="#" id="reset">Reset</a>  
+
+<form>
+<select id="combo">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+</select>
+
+
+<div class="inputs">
+<div></div>
+</div>
+<br>
+<!--Unique identifier: 
+<input type="text" id="uniqueid" placeholder="e.g. CS315-04-05-2015-1"></input></br></br>-->
+<input name="submit"  type="button" class="submit" value="Submit" /><br><br>
+<div id="output"></div>
+
+</form>
+</div>
+</center>
