@@ -24,8 +24,7 @@ $m = new MongoClient();
    
 
    //create new directory for recruiter
-   if (!file_exists($_POST['email']))
-   mkdir((string)$_POST['email'],0777);
+   exec('python createdirfreelancer.py '.$_POST['email']);
    try{
       sendmail($_POST['email'],$_POST['name']);
    send_sms($_POST['phonenumber']);
@@ -40,76 +39,6 @@ $m = new MongoClient();
 
 }
    echo "User registered!";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
    }
    //echo "Collection selected succsessfully";

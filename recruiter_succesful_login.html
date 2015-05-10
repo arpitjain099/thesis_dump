@@ -1,0 +1,34 @@
+
+<center>
+Please find more instructions here:<br>
+
+toAdd more instructions later.
+<script type="text/javascript">
+	function signout(){
+	window.localStorage.setItem("recruitercookie","");
+	}
+</script>
+<br>
+Please find the sample csv file  <a href="tasksheet.csv">here</a>. Download it and add your data fields.<br>Please do not make changes in the structure of file within. Instructions to use are given inside the file itself. 
+
+
+<br><br>
+
+<form action="upload.php" method="post" enctype="multipart/form-data">
+    Select file to upload:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="hidden" name="username" id='username'>
+    <input type="submit" value="Upload csv file" name="submit">
+</form>
+<script type="text/javascript">
+	document.getElementById("username").value=window.localStorage.getItem("recruitercookie");
+
+	console.log("ca");
+</script>
+
+<br>
+If you'd however like to upload tasks by filling in data values manually over a web interface please click <a href="jquery-task-adder.html">here</a>.
+
+<br> Please ensure to click the signout button when you are done. We hope you have a good time using our service. Thank you!
+<button onclick="signout()">Signout</button>
+</center>

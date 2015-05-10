@@ -41,14 +41,19 @@ xmlhttp.onreadystatechange=function()
   if (xmlhttp.readyState==4 && xmlhttp.status==200)
     {
     console.log("working?");
+    //alert(xmlhttp.responseText);
    if(xmlhttp.responseText=="wrong credentials")
     {//document.getElementById("status").innerHTML="Wrong credentials entered. Please try again!";
   alert("Wrong credentials entered. Please try again!");
 location.reload();
 
 }
-    else {document.cookie="username=".concat(document.getElementById("loginform").elements[0].value);
-   console.log("cookie set");}
+    else {
+    	//document.cookie="username=".concat(document.getElementById("loginform").elements[0].value);
+    	window.localStorage.setItem("recruitercookie",document.getElementById("loginform").elements[0].value);
+   console.log("cookie set");
+   window.location.assign("recruiter_succesful_login.html")
+}
    //alert(readCookie("username"));
     }
   }
@@ -62,7 +67,7 @@ xmlhttp.send("username=".concat(document.getElementById("loginform").elements[0]
 //xmlhttp.send();
 }
 function recruitersignup() {
-    window.location.assign("recruitersignup.html")
+    window.location.assign("recruitersignup.html");
 }
 </script>
 </head>
@@ -90,7 +95,7 @@ function recruitersignup() {
   </div>
   <div data-role="main" class="ui-content">
     
-    <input type="button" onclick="recruitersignup()"value="Signup">
+    <input type="button" onclick="recruitersignup()"value="Signup">
   </div>
 </div>
   

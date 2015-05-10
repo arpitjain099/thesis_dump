@@ -36,6 +36,7 @@ if($result->num_rows>0){
 
 */
 // ^^ old php code
+header('Access-Control-Allow-Origin: *');
  $m = new MongoClient();
    //echo "Connection to database successfully";
    //echo "<br>";

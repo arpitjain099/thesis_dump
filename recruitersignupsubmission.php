@@ -1,4 +1,5 @@
 <?php
+header('Access-Control-Allow-Origin: *');
 $username = $_POST['username'];
 $passworda = $_POST['password'];
 
@@ -20,7 +21,9 @@ $m = new MongoClient();
    else{
    $collection->insert(array("username" => $_POST['username'],"password"=> $_POST['password'],"name" => $_POST['name'],"phone"=> $_POST['phone'],"email" => $_POST['email'],"address"=> $_POST['address'],"count"=>0));	
    //create new directory for recruiter
-   mkdir((string)$_POST['username'],0777);
+   exec('python createdir.py '.$_POST['username']);
+   //mkdir('recruiterdir/'.(string)$_POST['username'],777);
+   //mkdir('recruiterdir/'.(string)$_POST['username'].'/uploads',777);
 	echo "user inserted";
 
    }

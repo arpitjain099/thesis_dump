@@ -80,11 +80,11 @@ xmlhttp.onreadystatechange=function()
 }
     else {
       alert("User registered. Proceed to login page.")
-      window.location = 'freelancer.html';
+      window.location.assign('freelancer.html');
      }
     }
   }
-xmlhttp.open("POST","172.27.20.232/thesis/freelancersignupsubmission.php",true);
+xmlhttp.open("POST",url.concat("/thesis/freelancersignupsubmission.php"),true);
 xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 //alert();
 
