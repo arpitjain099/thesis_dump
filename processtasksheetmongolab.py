@@ -1,20 +1,19 @@
 import csv
 import sys
 from pymongo import MongoClient
-client = MongoClient()
-db=client.thesisdb
+client = MongoClient("mongodb://arpitjain099:gogo@ds031862.mongolab.com:31862/thesisdb")
+db=client.get_default_database()
 import time
 from time import gmtime, strftime
 collection=db.tasks
 #print db
 username=sys.argv[2]
 
-collection_rec=db.recruiter
+#collection_rec=db.get_default_database()
 #collection_rec.insert({"ada":"dada"})
 #collection_rec.find_one({u'username':username})["count"]=11
 #print collection_rec
-count= collection_rec.find_one({"username":username})['count']
-
+count= 0
 #print count
 #print val
 defaultquestions=["Is this image profane or not?","Is this comment profane or not?", "Categorize this image into 5 categories","Categorize this book","Give 5 tags to this article","Give 5 tags for this image"," Which of the variants look good to you?","Which of the variants matches the description?","Is this ad appealing to you?","Grade the sentiment expressed in this tweet","Grade the sentiment expressed in this user comment","From the product review, is the customer satisfied?", "Which image is better?", "Which design is more soothing?","How will you rank this MP3 file?","Help us rate this place"]
@@ -136,6 +135,6 @@ with open(sys.argv[1], 'rb') as csvfile:
 				post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":"","textcontent":"","mp3url":row[1],"img1":"","":"","heading":"","summary":"","tasksymbol":15,"dateofadding":str(int(time.time())),"time":row[2]+3,"price":int(row[3])}
 				#print "fa"
 				collection.insert(post)
-			post = collection_rec.find_one({"username":username})
-			post["count"]=count
-			collection_rec.save(post)
+			#post = collection_rec.find_one({"username":username})
+			#post["count"]=count
+			#collection_rec.save(post)

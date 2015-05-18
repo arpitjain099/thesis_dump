@@ -26,8 +26,8 @@ $m = new MongoClient();
    //create new directory for recruiter
    exec('python createdirfreelancer.py '.$_POST['email']);
    try{
-      sendmail($_POST['email'],$_POST['name']);
-   send_sms($_POST['phonenumber']);
+     // sendmail($_POST['email'],$_POST['name']);
+ //  send_sms($_POST['phonenumber']);
    //echo "user inserted";
 }
 
@@ -35,7 +35,7 @@ $m = new MongoClient();
 
 
  catch (Exception $e) {
-   echo "Exception caught";
+   //echo "Exception caught";
 
 }
    echo "User registered!";

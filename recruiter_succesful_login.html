@@ -1,4 +1,4 @@
-
+<script type="text/javascript" src="jquery.min.js"></script>
 <center>
 Please find more instructions here:<br>
 
@@ -20,15 +20,24 @@ Please find the sample csv file  <a href="tasksheet.csv">here</a>. Download it a
     <input type="hidden" name="username" id='username'>
     <input type="submit" value="Upload csv file" name="submit">
 </form>
-<script type="text/javascript">
-	document.getElementById("username").value=window.localStorage.getItem("recruitercookie");
 
-	console.log("ca");
-</script>
 
-<br>
+
 If you'd however like to upload tasks by filling in data values manually over a web interface please click <a href="jquery-task-adder.html">here</a>.
+<br><br>
+<form action = "http://localhost/thesis/approvetransactions.php" method = "post">
+<input type="hidden" name="country" id="hiddenfield">
 
-<br> Please ensure to click the signout button when you are done. We hope you have a good time using our service. Thank you!
+        <input type="submit" name="username" value="Approve submissions" />
+    </form>
+
+
+<br><br><br><br><br><br><br> Please ensure to click the signout button when you are done. We hope you have a good time using our service. Thank you!<br>
 <button onclick="signout()">Signout</button>
 </center>
+<script type="text/javascript">
+	document.getElementById("hiddenfield").value=window.localStorage.getItem("recruitercookie");
+	document.getElementById("username").value=window.localStorage.getItem("recruitercookie");
+	console.log(window.localStorage.getItem("recruitercookie"));
+	
+</script>

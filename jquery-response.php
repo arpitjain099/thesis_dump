@@ -8,6 +8,7 @@ $img1url = $_POST['img1url'];
 $img2url = $_POST['img2url'];
 $heading = $_POST['heading'];
 $mp3url = $_POST['mp3url'];
+$price = $_POST['price'];
 $textcontent = $_POST['textcontent'];
 $summary = $_POST['summary'];
 $tasksymbol = $_POST['tasksymbol'];
@@ -40,7 +41,8 @@ $collection->insert(array("username"=>$username[$x],
 	"summary"=>$summary[$x],
 	"tasksymbol"=>$tasksymbol[$x],
 	"taskid"=>$username[0].'_'.(string)($local+$x+1),
-	"time"=>$time[$x]	
+	"time"=>$time[$x],
+	"price"=>$price[$x],	
 ));	
 
 } 
