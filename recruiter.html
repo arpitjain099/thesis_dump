@@ -24,45 +24,54 @@
 }
 function loadXMLDoc()
 {
-if (window.XMLHttpRequest)
-  {// code for IE7+, Firefox, Chrome, Opera, Safari
-  xmlhttp=new XMLHttpRequest();
-  }
-else
-  {// code for IE6, IE5
-  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
+$.post("response.php", { 
+  username:document.getElementById("loginform").elements[0].value,
+  password:document.getElementById("loginform").elements[1].value
+})
 
-
-
-
-xmlhttp.onreadystatechange=function()
-  {
-  if (xmlhttp.readyState==4 && xmlhttp.status==200)
-    {
-    console.log("working?");
-    //alert(xmlhttp.responseText);
-   if(xmlhttp.responseText=="wrong credentials")
-    {//document.getElementById("status").innerHTML="Wrong credentials entered. Please try again!";
-  alert("Wrong credentials entered. Please try again!");
+.done(function( data ) {//console.log(data);
+  //console.log(typeof(data));
+try {
+  console.log(data);
+if(data=="wrong credentials")
+{
+    alert("Wrong credentials entered. Please try again!");
 location.reload();
-
 }
-    else {
-    	//document.cookie="username=".concat(document.getElementById("loginform").elements[0].value);
-    	window.localStorage.setItem("recruitercookie",document.getElementById("loginform").elements[0].value);
+else{
+    window.localStorage.setItem("recruitercookie",document.getElementById("loginform").elements[0].value);
    console.log("cookie set");
+   console.log(window.localStorage.getItem("recruitercookie"));
    window.location.assign("recruiter_succesful_login.html")
 }
-   //alert(readCookie("username"));
+      //  console.log(notifications.length);
+     
+}
+catch (e) {
+      console.log(e);
+      alert("Something went wrong! We are working hard to fix it!")
+        console.log("failed");
     }
-  }
+});
 
 
-xmlhttp.open("POST","response.php",true);
-xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-//alert();
-xmlhttp.send("username=".concat(document.getElementById("loginform").elements[0].value).concat("&password=".concat(document.getElementById("loginform").elements[1].value)));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //xmlhttp.send();
 }
@@ -82,10 +91,10 @@ function recruitersignup() {
 <div id="status">
 <form class="squirrel" id="loginform">
     <label for="name">Username *</label>
-    <input type="text" name="name" id="username" value="" required />
+    <input type="text" name="username" id="username" value="" required />
 
     <label for="name">Password *</label>
-    <input type="password" name="name" id="password" value="" required />
+    <input type="password" name="password" id="password" value="" required />
     <input type="submit" value="Login"onclick="loadXMLDoc()">
   </form>
 

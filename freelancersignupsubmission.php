@@ -15,16 +15,16 @@ $m = new MongoClient();
    $db = $m->thesisdb;
    //echo "Database thesisdb selected";
    $collection = $db->users;
-   $joe = $collection->findOne(array("email" => $_POST['email']));
+   $joe = $collection->findOne(array("emailid" => $_POST['emailid']));
    if($joe)echo "User already exists! Try logging in!";
    else{
-   $collection->insert(array("password"=> $_POST['password'], "phonenumber"=>$_POST['phonenumber'], "email"=>$_POST['email'],"name"=> $_POST['name'],"collegename" => $_POST['collegename'], "wallet"=>0,"level"=>0, "photo"=>"http://img2.wikia.nocookie.net/__cb20090709062312/starwars/images/d/d6/Human_NEGAS.jpg"));	
+   $collection->insert(array("password"=> $_POST['password'], "phone"=>$_POST['phonenumber'], "emailid"=>$_POST['emailid'],"name"=> $_POST['name'],"collegename" => $_POST['collegename'], "wallet"=>0,"level"=>0, "photo"=>"http://img2.wikia.nocookie.net/__cb20090709062312/starwars/images/d/d6/Human_NEGAS.jpg"));	
 
 
    
 
    //create new directory for recruiter
-   exec('python createdirfreelancer.py '.$_POST['email']);
+   exec('python createdirfreelancer.py '.$_POST['emailid']);
    try{
      // sendmail($_POST['email'],$_POST['name']);
  //  send_sms($_POST['phonenumber']);

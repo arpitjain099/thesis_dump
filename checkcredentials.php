@@ -45,7 +45,7 @@ header('Access-Control-Allow-Origin: *');
    //echo "Database thesisdb selected";
    $collection = $db->users;
    //echo "Collection selected succsessfully";
-   $joe = $collection->findOne(array("email" => $_POST['email'],"password"=> $_POST['password']));
+   $joe = $collection->findOne(array("emailid" => $_POST['emailid'],"password"=> $_POST['password']));
    if(!$joe)echo "wrong credentials";
    //
    else echo "user found";

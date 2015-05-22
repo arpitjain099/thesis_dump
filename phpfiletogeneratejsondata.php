@@ -42,15 +42,18 @@ if (!in_array($a, $completedtasks)) {
 //echo json_encode($diff);
 $output=array();
   //$sts="[";
+$timeval=0;
    $count=0;
    foreach($diff as $d){
 foreach($joe2 as $id=> $value)
   
     if($value['taskid']==$d)
    {
+    while($timeval<=150){
     array_push($output,$value);
    // $sts=$sts.json_encode($value);// $value;
-
+    $timeval=$timeval + $value['time'];
+   }
    }
 }
 echo json_encode($output);

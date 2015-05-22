@@ -1,15 +1,15 @@
 <script type="text/javascript" src="jquery.min.js"></script>
 <center>
-Please find more instructions here:<br>
-
-toAdd more instructions later.
+Please find more instructions <a href="#">here</a>:<br>
+<hr>
 <script type="text/javascript">
 	function signout(){
 	window.localStorage.setItem("recruitercookie","");
+  window.location.assign("recruiter.html");
 	}
 </script>
-<br>
-Please find the sample csv file  <a href="tasksheet.csv">here</a>. Download it and add your data fields.<br>Please do not make changes in the structure of file within. Instructions to use are given inside the file itself. 
+<h3>Upload tasks</h3>
+Please find the sample csv file  <a href="tasksheet.csv" download>here</a>. Download it and add your data fields.<br>Please do not make changes in the structure of file within. Instructions to use are given inside the file itself. 
 
 
 <br><br>
@@ -18,26 +18,49 @@ Please find the sample csv file  <a href="tasksheet.csv">here</a>. Download it a
     Select file to upload:
     <input type="file" name="fileToUpload" id="fileToUpload">
     <input type="hidden" name="username" id='username'>
-    <input type="submit" value="Upload csv file" name="submit">
+    <input type="submit" value="Upload questionnaire csv file" name="submit">
 </form>
 
 
 
 If you'd however like to upload tasks by filling in data values manually over a web interface please click <a href="jquery-task-adder.html">here</a>.
-<br><br>
-<form action = "http://localhost/thesis/approvetransactions.php" method = "post">
-<input type="hidden" name="country" id="hiddenfield">
+<hr>
+<h3>Approve tasks completed by users</h3>
+<button onclick="fetchresults()">Click here to get csv file</button><div id="approve"></div>
+<br>
+<form action="upload_approve_submissions.php" method="post" enctype="multipart/form-data">
+    Select file to upload:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="hidden" name="username" id='username2'>
+    <input type="submit" value="Upload approvals csv file" name="submit">
+</form>
 
-        <input type="submit" name="username" value="Approve submissions" />
-    </form>
-
-
-<br><br><br><br><br><br><br> Please ensure to click the signout button when you are done. We hope you have a good time using our service. Thank you!<br>
+<hr>Please ensure to click the signout button when you are done. We hope you have a good time using our service. Thank you!<br>
 <button onclick="signout()">Signout</button>
 </center>
 <script type="text/javascript">
-	document.getElementById("hiddenfield").value=window.localStorage.getItem("recruitercookie");
-	document.getElementById("username").value=window.localStorage.getItem("recruitercookie");
+function fetchresults(){
 	console.log(window.localStorage.getItem("recruitercookie"));
+    $.post( "http://localhost/thesis/approvetransactions.php", { username:window.localStorage.getItem("recruitercookie")})
+    .done(function( data ) {
+    	document.getElementById("approve").innerHTML=data;
+    	console.log(window.localStorage.getItem("recruitercookie"));
+   //window.location.assign("approvetransactions.php");
+  });
+}
+	//document.getElementById("hiddenfield").value=window.localStorage.getItem("recruitercookie");
+	document.getElementById("username").value=window.localStorage.getItem("recruitercookie");
+	document.getElementById("username2").value=window.localStorage.getItem("recruitercookie");
+	console.log(window.localStorage.getItem("recruitercookie"));
+
+
+	/*
+	function fetchresults(){
+    $.post( "http://localhost/jquery-quiz-server-side/viewresults.php", { testid:document.getElementById("testid").value})
+    .done(function( data ) {
+   window.location.assign("viewresults.php");
+  });
+}
+	*/
 	
 </script>

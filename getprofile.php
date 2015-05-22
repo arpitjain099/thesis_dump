@@ -1,5 +1,5 @@
 <?php
-header("Content-Type: application/json");
+//header("Content-Type: application/json");
 header('Access-Control-Allow-Origin: *');
 $emailid = $_POST['emailid'];
 
@@ -12,8 +12,26 @@ $m = new MongoClient();
    $db = $m->thesisdb;
    //echo "Database thesisdb selected";
    $collection = $db->users;
-   $joe = $collection->findOne(array("email" => $emailid));
-   if($joe)echo json_encode($joe);
+   $joe = $collection->findOne(array("emailid" => $emailid));
+   //var_dump($joe);
+     
+     
+   
+       $return = array(
+           '_id'=>$joe['_id'],
+           'name'=>$joe['name'],
+           'phone'=>$joe['phone'],
+           'emailid'=>$joe['emailid'],
+          'photo'=>$joe['photo'],
+           'wallet'=>$joe['wallet'],
+                    );
+      //echo $joe['emailid'];
+   //echo json_encode($return);
+
+
+
+
+   if($joe) echo json_encode($return);
    else{
    echo "user not found!";
 

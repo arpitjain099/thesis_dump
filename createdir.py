@@ -5,3 +5,4 @@ if not os.path.exists('recruiterdir/'+str(sys.argv[1])):
     #print('recruiterdir/'+sys.argv[1]+'/uploads')
     os.makedirs('recruiterdir/'+sys.argv[1]+'/uploads',0777)
     os.makedirs('recruiterdir/'+sys.argv[1]+'/evaluation',0777)
+    os.makedirs('recruiterdir/'+sys.argv[1]+'/approvals',0777)
