@@ -24,6 +24,7 @@
 }
 function loadXMLDoc()
 {
+  console.log(document.getElementById("loginform").elements[0].value);
 $.post("response.php", { 
   username:document.getElementById("loginform").elements[0].value,
   password:document.getElementById("loginform").elements[1].value
@@ -42,7 +43,8 @@ else{
     window.localStorage.setItem("recruitercookie",document.getElementById("loginform").elements[0].value);
    console.log("cookie set");
    console.log(window.localStorage.getItem("recruitercookie"));
-   window.location.assign("recruiter_succesful_login.html")
+   window.location.assign("recruiter_succesful_login.html");
+   console.log("test");
 }
       //  console.log(notifications.length);
      

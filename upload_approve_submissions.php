@@ -1,6 +1,6 @@
 <?php
 
-$target_dir = "recruiterdir/".$_POST['username']."/approvals/";
+$target_dir = "recruiterdir/".$_POST['username']."/evaluation/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 if($ext = pathinfo($_FILES["fileToUpload"]["name"], PATHINFO_EXTENSION)=='csv')
     {echo '<script>console.log("file upload successful");</script>';}

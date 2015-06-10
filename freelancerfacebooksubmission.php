@@ -1,7 +1,7 @@
 <?php
 header('Access-Control-Allow-Origin: *');
 include 'sendmailviagmail.php';
-
+include 'way2sms.php';
 
 //echo $passworda;
 //$device = $_GET['device'];
@@ -12,14 +12,15 @@ $m = new MongoClient();
    $db = $m->thesisdb;
    //echo "Database thesisdb selected";
    $collection = $db->users;
-   $joe = $collection->findOne(array("email" => $_POST['email']));
-   if($joe)echo "user exists";
+   $joe = $collection->findOne(array("emailid" => $_POST['emailid']));
+   if($joe)echo "User already exists! Try logging in!";
    else{
-   $collection->insert(array("password"=> "", "email"=>$_POST['email'],"name"=> $_POST['name'],"collegename" => "", "wallet"=>0,"level"=>0,"photo"=>$_POST['photo']));	
+   $collection->insert(array("password"=> "", "emailid"=>$_POST['email'],"name"=> $_POST['name'],"collegename" => "", "wallet"=>0,"level"=>0,"photo"=>$_POST['photo'],"phone"=>""));
+   exec('python createdirfreelancer.py '.$_POST['emailid']);	
 try{
-      sendmail($_POST['email'],$_POST['name']);
+      //sendmail($_POST['email'],$_POST['name']);
    //send_sms($_POST['phonenumber']);
-   echo "user inserted";
+   //echo "user inserted";
 }
 
 
@@ -30,11 +31,11 @@ try{
 
 }
    
-   
+   echo "User registered!";
 
    //create new directory for recruiter
-   mkdir((string)$_POST['email'],0777);
-	echo "user inserted";
+  
+	
 
    }
    //echo "Collection selected succsessfully";

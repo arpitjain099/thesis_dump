@@ -24,6 +24,7 @@ $m = new MongoClient();
            'emailid'=>$joe['emailid'],
           'photo'=>$joe['photo'],
            'wallet'=>$joe['wallet'],
+           'level'=>$joe['level'],
                     );
       //echo $joe['emailid'];
    //echo json_encode($return);

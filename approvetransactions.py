@@ -42,7 +42,7 @@ tasks=collection_tasks.find({"username": username})
 #fi.write("question,imgurl, img1url,img2url,summary,textcontent,heading,mp3url,emailid of submitter,tasksymbol,time taken,price offered,response time, Approval ('Y'/'N')\n")	
 			
 with open("recruiterdir/"+sys.argv[1]+"/evaluation/evaluation.csv", 'w') as csvfile:
-    fieldnames = ['question', 'taskid','imgurl',"img1","img2","summary","textcontent","heading","mp3url","emailid of submitter","tasksymbol","time taken","price offered","response time", "Approval ('Y'/'N')"]
+    fieldnames = ['question', 'taskid','imgurl',"img1","img2","summary","textcontent","heading","mp3url","emailid of submitter","tasksymbol","time taken","price offered","response","response time", "Approval ('Y'/'N')"]
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
     writer.writeheader()
     for i in tasks:#task list
@@ -52,7 +52,9 @@ with open("recruiterdir/"+sys.argv[1]+"/evaluation/evaluation.csv", 'w') as csvf
 				#if i['tasksymbol']==1 or i['tasksymbol']==3 or i['tasksymbol']==6 or i['tasksymbol']==9:
 					#print "d"
 				#writer.writerow({'first name': 'Baked', 'last_name': 'Beans'})
-				writer.writerow({'question': i['question'],'taskid': i['taskid'], 'imgurl':i['imgurl'],'img1': i['img1'], 'img2':i['img2'],'summary': i['summary'], 'textcontent':i['textcontent'],'heading': i['heading'], 'mp3url':i['mp3url'],'emailid of submitter':j['emailid'],'tasksymbol':str(int(i['tasksymbol'])),'time taken':str(int(j['time'])),'price offered':str(int(i['price'])),'response time':str(int(j['response'])),"""Approval ('Y'/'N')""":""})
+				
+				writer.writerow({'question': i['question'],'taskid': i['taskid'], 'imgurl':i['imgurl'],'img1': i['img1'], 'img2':i['img2'],'summary': i['summary'], 'textcontent':i['textcontent'],'heading': i['heading'], 'mp3url':i['mp3url'],'emailid of submitter':j['emailid'],'tasksymbol':str(int(i['tasksymbol'])),'time taken':str(int(j['time'])),'price offered':str(int(i['price'])),'response':j['response'],'response time':str(int(j['time'])),"""Approval ('Y'/'N')""":""})
+					
 
 
 				#fi.write(i['question']+","+i['imgurl']+","+i['img1']+","+i['img2']+","+i['summary']+","+i['textcontent']+","+i['heading']+","+i['mp3url']+","+j['emailid']+","+str(int(i['tasksymbol']))+","+str(int(j['time']))+","+str(int(i['price']))+","+str(int(j['response']))+"," +"\n")
