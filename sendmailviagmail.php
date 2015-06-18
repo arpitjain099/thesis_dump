@@ -3,12 +3,11 @@
 header('Access-Control-Allow-Origin: *');
 require_once "Mail.php";
 
-function sendmail($toperson,$name){
+function sendmail($toperson,$name, $body,$subject){
 
-$from = 'arpitjain099@gmail.com';
+$from = 'mcrowdthesis@gmail.com';
 $to = $toperson;
-$subject = 'Registered on mCrowd!';
-$body = "Hi ".($name).",\n\n You have been registered on mCrowd - an initiative by IIT Kanpur! \n Hope you have a good experience!\n\n Regards\n mCrowd!";
+$body = "Hi ".($name).($body);
 
 $headers = array(
     'From' => $from,
@@ -20,8 +19,8 @@ $smtp = Mail::factory('smtp', array(
         'host' => 'ssl://smtp.gmail.com',
         'port' => '465',
         'auth' => true,
-        'username' => 'arpitjain099@gmail.com',
-        'password' => 'password'
+        'username' => 'mcrowdthesis@gmail.com',
+        'password' => 'iitkcserox'
     ));
 
 $mail = $smtp->send($to, $headers, $body);

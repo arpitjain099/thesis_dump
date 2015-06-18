@@ -33,6 +33,9 @@ with open(sys.argv[1], 'rb') as csvfile:
 				"text1":row[8],#
 				"text2":row[9],#
 				"gps_coordinate":row[10],##
+				"rating":row[11],
+				"review":row[12],
+				"username":username,
 				"taskid":username+'_'+str(count),	#	
 				"dateofadding":str(int(time.time())),#
 				"time":time_assign,#

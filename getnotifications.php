@@ -20,7 +20,7 @@ $m = new MongoClient();
    //echo $collection;
    $joe = $collection->find(array("emailid" => $_POST['emailid']));  
     $i=0;
-
+ $return =array();
    foreach($joe as $item){
        $return[$i] = array(
            '_id'=>$item['_id'],

@@ -1,7 +1,26 @@
 <?php
 header('Access-Control-Allow-Origin: *');
+function distance($lat1, $lon1, $lat2, $lon2, $unit) {
+
+  $theta = $lon1 - $lon2;
+  $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
+  $dist = acos($dist);
+  $dist = rad2deg($dist);
+  $miles = $dist * 60 * 1.1515;
+  $unit = strtoupper($unit);
+
+  if ($unit == "K") {
+    return ($miles * 1.609344);
+  } else if ($unit == "N") {
+      return ($miles * 0.8684);
+    } else {
+        return $miles;
+      }
+}
 
 $emailid=$_POST['emailid'];
+$lat=$_POST['lat'];
+$longd=$_POST['longd'];
 //echo $passworda;
 //$device = $_GET['device'];
 $m = new MongoClient();
@@ -14,11 +33,13 @@ $m = new MongoClient();
    $collection2= $db->tasks;
    $joe = $collection->find(array("emailid" => $emailid));//completed tasks one
    //echo $json_encode($joe);
-   //$joe2 = $collection2->find();//tasks one
-$regex = new MongoRegex("/^$|^([a-z_\.\-])+\@(([a-z\-])+\.)+([a-z]{2,4})+(\s*,\s*([a-z_\.\-])+\@(([a-z\-])+\.)+([a-z]{2,4})+)*$/
-/i"); 
+   $joe2 = $collection2->find();//tasks one
+
+$search_string=',';
+$regex = new MongoRegex("/,/i"); 
 $where = array('gps_coordinate' => $regex);
-$joe2 = $collection2->find($where);//tasks one
+$joe2 = $collection2->find($where);
+
 
    $tasks=array();
    $completedtasks=array();
@@ -42,48 +63,28 @@ if (!in_array($a, $completedtasks)) {
 
 }
 //echo json_encode($diff);
+
 $output=array();
   //$sts="[";
-$timeval=0;
-   $count=0;
+$min=4200000000;
    foreach($diff as $d){
 foreach($joe2 as $id=> $value)
   
     if($value['taskid']==$d)
    {
-   
-    array_push($output,$value);break;
+$lat=(double)explode(",",$value['gps_coordinate'])[0];
+$longd=(double)explode(",",$value['gps_coordinate'])[1];
+    $temp=distance($_POST['lat'],$_POST['longd'],$lat,$longd,'K');
+  if($min>$temp)
+    {
+      $output=$value;
+  $min=$temp;
+}
    // $sts=$sts.json_encode($value);// $value;
+ 
    }
 }
 echo json_encode($output);
-
-/*
-
-{ //echo $value1[taskid];
-  foreach($joe2 as $id2=> $value2)
-  if ($value2['taskid']==$value1['taskid'])
-    break;
-  else
-    { #echo $value2;
-      //$list[]=json_encode($value2);
-      $sts=$sts.json_encode($value2);
-      echo $sts;
-      //echo json_encode($value2);echo ",";
-  $count=$count+1;
-  if($count>=10)break;
-} 
-}
-*/
-//echo "]";
-   //echo $joe[0].taskid;
-   
-   //echo "Collection selected succsessfully";
-   //$joe = $collection->findOne(array("username" => $_POST['username'],"password"=> $_POST['password']));
-   //if(!$joe)echo "wrong credentials";
-   //
-   //else echo "user found";
-//echo $result+"";
 
 
 ?>

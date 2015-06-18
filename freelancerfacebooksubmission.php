@@ -13,12 +13,12 @@ $m = new MongoClient();
    //echo "Database thesisdb selected";
    $collection = $db->users;
    $joe = $collection->findOne(array("emailid" => $_POST['emailid']));
-   if($joe)echo "User already exists! Try logging in!";
+   if($joe)echo "user exists";
    else{
-   $collection->insert(array("password"=> "", "emailid"=>$_POST['email'],"name"=> $_POST['name'],"collegename" => "", "wallet"=>0,"level"=>0,"photo"=>$_POST['photo'],"phone"=>""));
+   $collection->insert(array("password"=> "", "emailid"=>$_POST['emailid'],"name"=> $_POST['name'],"collegename" => "", "wallet"=>0,"level"=>0,"photo"=>$_POST['photo'],"phone"=>""));
    exec('python createdirfreelancer.py '.$_POST['emailid']);	
 try{
-      //sendmail($_POST['email'],$_POST['name']);
+      //sendmail($_POST['email'],$_POST['name'],",\n\n You have been registered on mCrowd - an initiative by IIT Kanpur! \n Hope you have a good experience!\n\n Regards\n mCrowd!","Registered on mCrowd!");
    //send_sms($_POST['phonenumber']);
    //echo "user inserted";
 }
@@ -31,7 +31,7 @@ try{
 
 }
    
-   echo "User registered!";
+   echo "user exists";
 
    //create new directory for recruiter
   
