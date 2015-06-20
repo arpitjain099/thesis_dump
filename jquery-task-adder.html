@@ -7,128 +7,28 @@ $(document).ready(function(){
     var i = $('input').size() + 1;
      
     $('#add').click(function() {
-    	if($('#combo').val()=='1')
-    		{   	//done
+    	
+    		  	//done
 
     			//post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":row[1],"textcontent":"","mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":3,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
     	$('</br><div><textarea rows="4" cols="40" type="text" class="question" name="dynamic[]" placeholder="Question" /></div>').fadeIn('slow').appendTo('.inputs');
-    	
-    	$('<div><textarea rows="1" cols="40" type="text" class="imgurl" name="dynamic[]" placeholder="img url" /></div>').fadeIn('slow').appendTo('.inputs');
-    	$('<div><textarea rows="1" cols="40" type="text" class="textcontent" name="dynamic[]" placeholder="textcontent" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
-    	$('<div><textarea rows="1" cols="40" type="text" class="mp3url" name="dynamic[]" placeholder="mp3 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
-        
-         $('<div><textarea rows="1" cols="40" type="text" class="img1url" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
-        $('<div><textarea rows="1" cols="40" type="text" class="img2url" name="dynamic[]" placeholder="img2 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
-        $('<div><textarea rows="1" cols="40" type="text" class="heading" name="dynamic[]" placeholder="heading" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
-        $('<div><textarea rows="1" cols="40" type="text" class="summary" name="dynamic[]" placeholder="summary" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
-        $('<div><input type="text"  rows="1" cols="40" type="text" class="tasksymbol" name="dynamic[]" placeholder="img1 url" style="display:none;" value="1"/></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="4" cols="40" type="text" class="price" name="dynamic[]" placeholder="Price" /></div>').fadeIn('slow').appendTo('.inputs');
+
+    	$('<div><textarea rows="1" cols="40" type="text" class="img1url" name="dynamic[]" placeholder="img1url" /></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="img2url" name="dynamic[]" placeholder="img2url" /></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="heading" name="dynamic[]" placeholder="heading" /></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="context" name="dynamic[]" placeholder="context" /></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="1" cols="40" type="text" class="title" name="dynamic[]" placeholder="title" /></div>').fadeIn('slow').appendTo('.inputs');
+    	$('<div><textarea rows="1" cols="40" type="text" class="photo_upload_on" name="dynamic[]" placeholder="photo_upload_on" /></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="text1" name="dynamic[]" placeholder="text1" /></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="text2" name="dynamic[]" placeholder="text2" /></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="gps_coordinate" name="dynamic[]" placeholder="gps_coordinate" /></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="rating" name="dynamic[]" placeholder="rating" /></div>').fadeIn('slow').appendTo('.inputs');
+        $('<div><textarea rows="1" cols="40" type="text" class="review" name="dynamic[]" placeholder="review" /></div>').fadeIn('slow').appendTo('.inputs');  
         $('<div><textarea rows="4" cols="40" type="text" class="time" name="dynamic[]" placeholder="Timelimit (in seconds)" /></div>').fadeIn('slow').appendTo('.inputs');
-         $('<div><textarea rows="4" cols="40" type="text" class="price" name="dynamic[]" placeholder="Price" /></div>').fadeIn('slow').appendTo('.inputs');
-        }
-        else if($('#combo').val()=='2')
-            {       //done
-
-                //post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":row[1],"textcontent":"","mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":3,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
-        $('</br><div><textarea rows="4" cols="40" type="text" class="question" name="dynamic[]" placeholder="Question" /></div>').fadeIn('slow').appendTo('.inputs');
+         
         
-        $('<div><textarea rows="1" cols="40" type="text" class="imgurl" name="dynamic[]" placeholder="img url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
-        $('<div><textarea rows="1" cols="40" type="text" class="textcontent" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
-        $('<div><textarea rows="1" cols="40" type="text" class="mp3url" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
         
-         $('<div><textarea rows="1" cols="40" type="text" class="img1url" name="dynamic[]" placeholder="img1 url" /></div>').fadeIn('slow').appendTo('.inputs');
-        $('<div><textarea rows="1" cols="40" type="text" class="img2url" name="dynamic[]" placeholder="img2 url" /></div>').fadeIn('slow').appendTo('.inputs');
-        $('<div><textarea rows="1" cols="40" type="text" class="heading" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
-        $('<div><textarea rows="1" cols="40" type="text" class="summary" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
-       $('<div><input type="text"  rows="1" cols="40" type="text" class="tasksymbol" name="dynamic[]" placeholder="img1 url" style="display:none;" value="7"/></div>').fadeIn('slow').appendTo('.inputs');
-        $('<div><textarea rows="4" cols="40" type="text" class="time" name="dynamic[]" placeholder="Timelimit (in seconds)" /></div>').fadeIn('slow').appendTo('.inputs');
-        $('<div><textarea rows="4" cols="40" type="text" class="price" name="dynamic[]" placeholder="Price" /></div>').fadeIn('slow').appendTo('.inputs');
-        }
-
-
-        else if($('#combo').val()=='3')
-            {       
-//done
-                //post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":row[1],"textcontent":"","mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":3,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
-        $('</br><div><textarea rows="4" cols="40" type="text" class="question" name="dynamic[]" placeholder="Question" /></div>').fadeIn('slow').appendTo('.inputs');
-        
-        $('<div><textarea rows="1" cols="40" type="text" class="imgurl" name="dynamic[]" placeholder="img url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
-        $('<div><textarea rows="1" cols="40" type="text" class="textcontent" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
-        $('<div><textarea rows="1" cols="40" type="text" class="mp3url" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
-        
-         $('<div><textarea rows="1" cols="40" type="text" class="img1url" name="dynamic[]" placeholder="img1 url" /></div>').fadeIn('slow').appendTo('.inputs');
-        $('<div><textarea rows="1" cols="40" type="text" class="img2url" name="dynamic[]" placeholder="img2 url" /></div>').fadeIn('slow').appendTo('.inputs');
-        $('<div><textarea rows="1" cols="40" type="text" class="heading" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
-        $('<div><textarea rows="1" cols="40" type="text" class="summary" name="dynamic[]" placeholder="Description" /></div>').fadeIn('slow').appendTo('.inputs');
-       $('<div><input type="text"  rows="1" cols="40" type="text" class="tasksymbol" name="dynamic[]" placeholder="img1 url" style="display:none;" value="14"/></div>').fadeIn('slow').appendTo('.inputs');
-        $('<div><textarea rows="4" cols="40" type="text" class="time" name="dynamic[]" placeholder="Timelimit (in seconds)" /></div>').fadeIn('slow').appendTo('.inputs');
-        $('<div><textarea rows="4" cols="40" type="text" class="price" name="dynamic[]" placeholder="Price" /></div>').fadeIn('slow').appendTo('.inputs');
-        }
-
-
-
-        else if($('#combo').val()=='4')
-    		{   	
-//done
-    			//post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":row[1],"textcontent":"","mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":3,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
-    	$('</br><div><textarea rows="4" cols="40" type="text" class="question" name="dynamic[]" placeholder="Question" /></div>').fadeIn('slow').appendTo('.inputs');
-    	
-    	$('<div><textarea rows="1" cols="40" type="text" class="imgurl" name="dynamic[]" placeholder="img url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
-    	$('<div><textarea rows="1" cols="40" type="text" class="textcontent" name="dynamic[]" placeholder="textcontent" /></div>').fadeIn('slow').appendTo('.inputs');
-    	$('<div><textarea rows="1" cols="40" type="text" class="mp3url" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
-        
-         $('<div><textarea rows="1" cols="40" type="text" class="img1url" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
-        $('<div><textarea rows="1" cols="40" type="text" class="img2url" name="dynamic[]" placeholder="img2 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
-        $('<div><textarea rows="1" cols="40" type="text" class="heading" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
-        $('<div><textarea rows="1" cols="40" type="text" class="summary" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
-       $('<div><input type="text"  rows="1" cols="40" type="text" class="tasksymbol" name="dynamic[]" placeholder="img1 url" style="display:none;" value="2"/></div>').fadeIn('slow').appendTo('.inputs');
-       $('<div><textarea rows="4" cols="40" type="text" class="time" name="dynamic[]" placeholder="Timelimit (in seconds)" /></div>').fadeIn('slow').appendTo('.inputs');
-       $('<div><textarea rows="4" cols="40" type="text" class="price" name="dynamic[]" placeholder="Price" /></div>').fadeIn('slow').appendTo('.inputs');
-        }
-
-        
-
-        else if($('#combo').val()=='5')
-    		{   	//done
-
-    			//post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":row[1],"textcontent":"","mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":3,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
-    	$('</br><div><textarea rows="4" cols="40" type="text" class="question" name="dynamic[]" placeholder="Question" /></div>').fadeIn('slow').appendTo('.inputs');
-    	
-    	$('<div><textarea rows="1" cols="40" type="text" class="imgurl" name="dynamic[]" placeholder="img url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
-    	$('<div><textarea rows="1" cols="40" type="text" class="textcontent" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
-    	$('<div><textarea rows="1" cols="40" type="text" class="mp3url" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
-        
-         $('<div><textarea rows="1" cols="40" type="text" class="img1url" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
-        $('<div><textarea rows="1" cols="40" type="text" class="img2url" name="dynamic[]" placeholder="img2 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
-        $('<div><textarea rows="1" cols="40" type="text" class="heading" name="dynamic[]" placeholder="Heading" /></div>').fadeIn('slow').appendTo('.inputs');
-        $('<div><textarea rows="1" cols="40" type="text" class="summary" name="dynamic[]" placeholder="Summary" /></div>').fadeIn('slow').appendTo('.inputs');
-       $('<div><input type="text"  rows="1" cols="40" type="text" class="tasksymbol" name="dynamic[]" placeholder="img1 url" style="display:none;" value="4"/></div>').fadeIn('slow').appendTo('.inputs');
-        $('<div><textarea rows="4" cols="40" type="text" class="time" name="dynamic[]" placeholder="Timelimit (in seconds)" /></div>').fadeIn('slow').appendTo('.inputs');
-        $('<div><textarea rows="4" cols="40" type="text" class="price" name="dynamic[]" placeholder="Price" /></div>').fadeIn('slow').appendTo('.inputs');
-        }
-
-      
-
-
-        
-
-        else if($('#combo').val()=='6')
-    		{   	//done
-
-    			//post={"question":question,"taskid":username+'_'+str(count),"username":username,"imgurl":row[1],"textcontent":"","mp3url":"","img1":"","img2":"","heading":"","summary":"","tasksymbol":3,"dateofadding":str(strftime("%d-%m-%Y %H:%M:%S", gmtime()))}
-    	$('</br><div><textarea rows="4" cols="40" type="text" class="question" name="dynamic[]" placeholder="Question" /></div>').fadeIn('slow').appendTo('.inputs');
-    	
-    	$('<div><textarea rows="1" cols="40" type="text" class="imgurl" name="dynamic[]" placeholder="img url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
-    	$('<div><textarea rows="1" cols="40" type="text" class="textcontent" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
-    	$('<div><textarea rows="1" cols="40" type="text" class="mp3url" name="dynamic[]" placeholder="mp3 url" /></div>').fadeIn('slow').appendTo('.inputs');
-        
-         $('<div><textarea rows="1" cols="40" type="text" class="img1url" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
-        $('<div><textarea rows="1" cols="40" type="text" class="img2url" name="dynamic[]" placeholder="img2 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
-        $('<div><textarea rows="1" cols="40" type="text" class="heading" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
-        $('<div><textarea rows="1" cols="40" type="text" class="summary" name="dynamic[]" placeholder="img1 url" style="display:none;"/></div>').fadeIn('slow').appendTo('.inputs');
-       $('<div><input type="text"  rows="1" cols="40" type="text" class="tasksymbol" name="dynamic[]" placeholder="img1 url" style="display:none;" value="15"/></div>').fadeIn('slow').appendTo('.inputs');
-        $('<div><textarea rows="4" cols="40" type="text" class="time" name="dynamic[]" placeholder="Timelimit (in seconds)" /></div>').fadeIn('slow').appendTo('.inputs');
-        $('<div><textarea rows="4" cols="40" type="text" class="price" name="dynamic[]" placeholder="Price" /></div>').fadeIn('slow').appendTo('.inputs');
-        }
 
         i++;
     });
@@ -136,16 +36,19 @@ $(document).ready(function(){
     $('#remove').click(function() {
     if(i > 1) {
         $('.question:last').remove();
-        $('.imgurl:last').remove();
+        $('.price:last').remove();
         $('.img1url:last').remove();
         $('.img2url:last').remove();
-        $('.textcontent:last').remove();
         $('.heading:last').remove();
-        $('.summary:last').remove();
-        $('.mp3url:last').remove();
-        $('.tasksymbol:last').remove();
+        $('.context:last').remove();
+        $('.title:last').remove();
+        $('.photo_upload_on:last').remove();
+        $('.text1:last').remove();
+        $('.text2:last').remove();
+        $('.gps_coordinate:last').remove();
+        $('.rating:last').remove();
+        $('.review:last').remove();
         $('.time:last').remove();
-        $('.price:last').remove();
         i--;
     }
     });
@@ -153,16 +56,19 @@ $(document).ready(function(){
     $('#reset').click(function() {
     while(i > 2) {
         $('.question:last').remove();
-        $('.imgurl:last').remove();
+        $('.price:last').remove();
         $('.img1url:last').remove();
         $('.img2url:last').remove();
-        $('.textcontent:last').remove();
         $('.heading:last').remove();
-        $('.summary:last').remove();
-        $('.mp3url:last').remove();
-        $('.tasksymbol:last').remove();
+        $('.context:last').remove();
+        $('.title:last').remove();
+        $('.photo_upload_on:last').remove();
+        $('.text1:last').remove();
+        $('.text2:last').remove();
+        $('.gps_coordinate:last').remove();
+        $('.rating:last').remove();
+        $('.review:last').remove();
         $('.time:last').remove();
-        $('.price:last').remove();
         i--;
     }
     });
@@ -252,16 +158,6 @@ For more information on task id's please refer to project homepage.<br>
 
 <a href="#" id="add">Add</a> | <a href="#" id="remove">Remove</a>  | <a href="#" id="reset">Reset</a>  
 
-<form>Task id: 
-<select id="combo">
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option>
-  <option value="6">6</option>
-  
-</select>
 
 
 <div class="inputs">

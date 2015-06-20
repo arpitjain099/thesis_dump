@@ -42,7 +42,7 @@ tasks=collection_tasks.find({"username": username})
 #fi.write("question,imgurl, img1url,img2url,summary,textcontent,heading,mp3url,emailid of submitter,tasksymbol,time taken,price offered,response time, Approval ('Y'/'N')\n")	
 			
 with open("recruiterdir/"+sys.argv[1]+"/evaluation/evaluation.csv", 'w') as csvfile:
-    fieldnames = ['question', 'taskid','imgurl',"img1","img2","summary","textcontent","heading","mp3url","emailid of submitter","tasksymbol","time taken","price offered","response","response time", "Approval ('Y'/'N')"]
+    fieldnames = ['question', 'taskid','img1url',"img2url","heading","context","title","photo_upload_on","text1","text2","gps_coordinate","rating","review","emailid of submitter","price offered","response","response time", "Approval ('Y'/'N')"]
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
     writer.writeheader()
     for i in tasks:#task list
@@ -53,7 +53,7 @@ with open("recruiterdir/"+sys.argv[1]+"/evaluation/evaluation.csv", 'w') as csvf
 					#print "d"
 				#writer.writerow({'first name': 'Baked', 'last_name': 'Beans'})
 				
-				writer.writerow({'question': i['question'],'taskid': i['taskid'], 'imgurl':i['imgurl'],'img1': i['img1'], 'img2':i['img2'],'summary': i['summary'], 'textcontent':i['textcontent'],'heading': i['heading'], 'mp3url':i['mp3url'],'emailid of submitter':j['emailid'],'tasksymbol':str(int(i['tasksymbol'])),'time taken':str(int(j['time'])),'price offered':str(int(i['price'])),'response':j['response'],'response time':str(int(j['time'])),"""Approval ('Y'/'N')""":""})
+				writer.writerow({'question': i['question'],'taskid': i['taskid'], 'img1url':i['img1url'],'img2url': i['img2url'], 'context':i['context'],'title': i['title'], 'photo_upload_on':i['photo_upload_on'],'text1': i['text1'],'text2': i['text2'],'gps_coordinate': i['gps_coordinate'],'rating': i['rating'],'heading': i['heading'], 'review':i['review'],'emailid of submitter':j['emailid'],'price offered':i['price'],'response':j['response'],'response time':j['time'],"""Approval ('Y'/'N')""":""})
 					
 
 

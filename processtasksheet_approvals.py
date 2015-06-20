@@ -22,9 +22,9 @@ with open(sys.argv[1], 'rb') as csvfile:
 	for index,row in enumerate(spamreader):
 		if index > 0:
 			#14
-			if row[9] not in listofusers:
+			if row[13] not in listofusers:
 
-				listofusers.append(row[9])
+				listofusers.append(row[13])
 tep=[]
 
 for i in listofusers:
@@ -40,12 +40,12 @@ with open(sys.argv[1], 'rb') as csvfile:
 	#spamreader=spamreader[17:]
 	for index,row in enumerate(spamreader):
 		#print row[1].split("_")[0]
-		if index > 0 and sys.argv[2]==row[1].split("_")[0] and (row[15]=='Y' or row[15]=='y') :
-			processedtasks.insert({"emailid":row[1],"taskid":row[9],"timestamp":str(int(time.time()))})
+		if index > 0 and sys.argv[2]==row[1].split("_")[0] and (row[17]=='Y' or row[17]=='y') :
+			processedtasks.insert({"emailid":row[13],"taskid":row[1],"timestamp":str(int(time.time()))})
 			for i in tep:
-				taa=row[9]
+				taa=row[13]
 				
-				i[taa]=i[taa]+int(row[12])
+				i[taa]=i[taa]+int(row[14])
 						
 
 						#tep[i]=tep[I]+int(row[12])
