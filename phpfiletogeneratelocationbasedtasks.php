@@ -84,7 +84,9 @@ $longd=(double)explode(",",$value['gps_coordinate'])[1];
  
    }
 }
-echo json_encode($output);
+$outputarr=array();
+ array_push($outputarr,$output);
+echo json_encode($outputarr);
 
 
 ?>

@@ -24,6 +24,7 @@ $joe2 = $collection2->find($where);//tasks one
    $completedtasks=array();
    foreach ( $joe as $id => $value1 )
 {
+
   array_push($completedtasks,$value1['taskid']);
 }
 

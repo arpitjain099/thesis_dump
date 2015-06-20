@@ -24,9 +24,16 @@ $m = new MongoClient();
    
 
    //create new directory for recruiter
-   exec('python createdirfreelancer.py '.$_POST['emailid']);
+   
+   try
+   {
+      echo exec('python createdirfreelancer.py '.$_POST['emailid']);}
+   catch (Exception $e) {
+   echo "Exception caught";
+
+}
    try{
-     // sendmail($_POST['email'],$_POST['name'],",\n\n You have been registered on mCrowd - an initiative by IIT Kanpur! \n Hope you have a good experience!\n\n Regards\n mCrowd!","Registered on mCrowd!");
+      sendmail($_POST['emailid'],$_POST['name'],",\n\n You have been registered on mCrowd - an initiative by IIT Kanpur! \n Hope you have a good experience!\n\n Regards\n mCrowd!","Registered on mCrowd!");
  //  send_sms($_POST['phonenumber']);
    //echo "user inserted";
 }

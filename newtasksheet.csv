@@ -1,3 +1,3 @@
 question,price,img1_url,img2_url,heading,context,title,photo_upload,text1,text2,gps_coordinate,rating_on_off,review_on_off,drawing_enabled
 Rate campus restaurant,7,,,,,,,,,"26.5145043,80.2366514",y,,
-draw a cat,5,,,,,,,,,,,,y
+draw a cat,5,gs,,,,,,,,,,,y

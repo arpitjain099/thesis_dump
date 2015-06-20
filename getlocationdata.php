@@ -9,14 +9,13 @@ $m = new MongoClient();
    // select a database
    $db = $m->thesisdb;
    //echo "Database thesisdb selected";
-   $collection = $db->completedtasks;
+   $collection = $db->locationdata;
    //$joe = $collection->findOne(array("email" => $_POST['email']));
    //if($joe)echo "user exists";
    //else{
     $date = new DateTime();
    $collection->insert(array( "gpsdata"=>$_POST['gpsdata'],"emailid"=> $_POST['emailid'],"timestamp"=>$date->getTimestamp()));	
 
-echo $date->getTimestamp();
    //}
    //echo "Collection selected succsessfully";
    //$joe = $collection->findOne(array("username" => $_POST['username'],"password"=> $_POST['password']));
