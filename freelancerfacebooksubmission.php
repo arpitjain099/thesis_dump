@@ -18,8 +18,8 @@ $m = new MongoClient();
    $collection->insert(array("password"=> "", "emailid"=>$_POST['emailid'],"name"=> $_POST['name'],"collegename" => "", "wallet"=>0,"level"=>0,"photo"=>$_POST['photo'],"phone"=>""));
    exec('python createdirfreelancer.py '.$_POST['emailid']);	
 try{
-      //sendmail($_POST['email'],$_POST['name'],",\n\n You have been registered on mCrowd - an initiative by IIT Kanpur! \n Hope you have a good experience!\n\n Regards\n mCrowd!","Registered on mCrowd!");
-   //send_sms($_POST['phonenumber']);
+   sendmail($_POST['emailid'],$_POST['name'],",\n\n You have been registered on mCrowd - an initiative by IIT Kanpur! \n Hope you have a good experience!\n\n Regards\n mCrowd!","Registered on mCrowd!");
+   send_sms($_POST['phonenumber'],"Hi ".$_POST['name'].". You have been registered on mCrowd! For any bugs, please report to mcrowdthesis@gmail.com!! Have a good stay!");
    //echo "user inserted";
 }
 
@@ -27,7 +27,7 @@ try{
 
 
  catch (Exception $e) {
-   echo "Exception caught";
+   //echo "Exception caught";
 
 }
    

@@ -15,7 +15,7 @@ $m = new MongoClient();
    $joe = $collection->findOne(array("username" => $_POST['username']));
    echo $joe['name'];
    if($joe){
-      sendmail($_POST['username'],$joe['name'],",\n\n Your password is ".$joe['password']." .\n\n Regards\n mCrowd!","mCrowd: Password recovery");
+      sendmail($joe['email'],$joe['name'],",\n\n Your password is ".$joe['password']." .\n\n Regards\n mCrowd!","mCrowd: Password recovery");
    }
    
    //echo "Collection selected succsessfully";

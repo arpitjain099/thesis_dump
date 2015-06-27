@@ -23,7 +23,7 @@ if ($uploadOk == 0) {
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
        
-       echo exec('python processtasksheet.py '.$target_file.' '.$_POST['username']);
+       echo exec('python newprocesstasksheet.py '.$target_file.' '.$_POST['username']);
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
     } else {
         echo "Sorry, there was an error uploading your file.";

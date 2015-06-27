@@ -13,8 +13,12 @@ completedtasks=[]
 
 for i in temp:
 	if username in i['taskid']:
-		dica={"taskid":i['taskid'],"emailid":i['emailid'],"response":i["response"],"time":i["time"]}
-		completedtasks.append(dica)
+		if i.has_key('time'):
+			dica={"taskid":i['taskid'],"emailid":i['emailid'],"response":i["response"],"time":i["time"]}
+			completedtasks.append(dica)
+		else:
+			dica={"taskid":i['taskid'],"emailid":i['emailid'],"response":i["response"],"time":"NA"}
+			completedtasks.append(dica)
 #print completedtasks
 
 processedtasks=[]

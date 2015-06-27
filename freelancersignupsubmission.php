@@ -34,7 +34,7 @@ $m = new MongoClient();
 }
    try{
       sendmail($_POST['emailid'],$_POST['name'],",\n\n You have been registered on mCrowd - an initiative by IIT Kanpur! \n Hope you have a good experience!\n\n Regards\n mCrowd!","Registered on mCrowd!");
- //  send_sms($_POST['phonenumber']);
+   send_sms($_POST['phonenumber'],"Hi ".$_POST['name'].". You have been registered on mCrowd! For any bugs, please report to mcrowdthesis@gmail.com!! Have a good stay!");
    //echo "user inserted";
 }
 
